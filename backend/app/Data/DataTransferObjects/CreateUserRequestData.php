@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Data\DataTransferObjects;
 
-use App\Domains\Auth\Requests\RegisterUserRequest;
+use App\Domains\Authentication\Requests\RegisterUserRequest;
 use Spatie\DataTransferObject\DataTransferObject;
 
 final class CreateUserRequestData extends DataTransferObject

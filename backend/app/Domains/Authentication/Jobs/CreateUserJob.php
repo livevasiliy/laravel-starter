@@ -38,7 +38,7 @@ class CreateUserJob extends Job
         $attributes = [
             'email' => $this->email,
             'name' => $this->name,
-            'password' => Hash::make($this->password)
+            'password' => $this->password
         ];
 
         return User::create($attributes);

@@ -45,7 +45,7 @@ class LoginUserFeature extends Feature
         catch (ModelNotFoundException $modelNotFoundException)
         {
             return $this->run(RespondWithJsonErrorJob::class, [
-                'content' => $modelNotFoundException->getMessage(),
+                'content' => trans('passwords.user'),
                 'status' => Response::HTTP_NOT_FOUND
             ]);
         }
