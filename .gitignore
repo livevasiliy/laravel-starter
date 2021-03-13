@@ -1,0 +1,34 @@
+### Common
+vendor
+node_modules
+npm-debug.log
+yarn-error.log
+.idea
+.vscode
+
+### Backend
+backend/public/storage
+backend/public/hot
+backend/storage/app/*.key
+backend/.env
+backend/Homestead.yaml
+backend/Homestead.json
+backend/.vagrant
+backend/.phpunit.result.cache
+backend/node_modules
+backend/npm-debug.log
+backend/yarn-error.log
+backend/.idea
+backend/.vscode
+
+
+### Frotnend
+frontend/.nuxt
+frontend/.env
+frontend/node_modules
+frontend/npm-debug.log
+frontend/yarn-error.log
+frontend/.idea
+frontend/.vscode
+frontend/laravel-echo-server*.lock
+frontend/.eslintcache
