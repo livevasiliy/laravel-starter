@@ -3,7 +3,6 @@
 namespace App\Domains\Authentication\Jobs;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 use Lucid\Units\Job;
 
 class CreateUserJob extends Job
