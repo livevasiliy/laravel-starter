@@ -36,11 +36,14 @@ export default {
     '@nuxtjs/axios',
     'nuxt-socket-io',
     '@nuxtjs/auth',
-    ['@nuxtjs/laravel-echo', {
-      'host': process.env.SOCKET_URL || 'localhost:6001',
-      'broadcaster': 'socket.io',
-      'authModule': false
-    }]
+    [
+      '@nuxtjs/laravel-echo',
+      {
+        host: process.env.SOCKET_URL || 'localhost:6001',
+        broadcaster: 'socket.io',
+        authModule: false,
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -51,9 +54,9 @@ export default {
     sockets: [
       {
         name: '/',
-        url: 'http://localhost:8888'
-      }
-    ]
+        url: 'http://localhost:8888',
+      },
+    ],
   },
 
   // @nuxtjs/auth module configuration
@@ -63,30 +66,30 @@ export default {
       prefix: 'auth.',
       options: {
         path: '/',
-        expires: 7 // 7 Days (https://auth.nuxtjs.org/api/options#cookie)
-      }
+        expires: 7, // 7 Days (https://auth.nuxtjs.org/api/options#cookie)
+      },
     },
     strategies: {
       local: {
         endpoints: {
           login: {
-            url: 'auth/sign-in',
+            url: 'authentication/login',
             method: 'post',
-            propertyName: 'token'
+            propertyName: 'token',
           },
           user: {
             url: 'user/me',
             method: 'get',
-            propertyName: false
+            propertyName: false,
           },
-          logout: false
-        }
-      }
+          logout: false,
+        },
+      },
     },
     redirect: {
       home: false,
-      login: '/authorization'
-    }
+      login: '/authorization',
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
