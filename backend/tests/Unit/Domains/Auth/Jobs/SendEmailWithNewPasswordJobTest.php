@@ -3,7 +3,7 @@
 namespace Tests\Unit\Domains\Auth\Jobs;
 
 use Tests\TestCase;
-use App\Domains\Auth\Jobs\SendEmailWithNewPasswordJob;
+use App\Domains\Authentication\Jobs\SendEmailWithNewPasswordJob;
 
 class SendEmailWithNewPasswordJobTest extends TestCase
 {
